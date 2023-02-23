@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!-- saved from url=(0018)http://proglab.fr/ -->
+<html ng-app="Proglab" ng-controller="AppCtrl" ng-post-message="" class="wf-opensans-n7-active wf-opensans-n4-active wf-sourcecodepro-n7-active wf-sourcecodepro-n4-active wf-active ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-animate){display:none !important;}ng\:form{display:block;}</style>
+		<title ng-bind="pageTitle" class="ng-binding">Proglab</title>
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="description" content="L&#39;algorithmique en ligne au lycée.">
+		<meta name="viewport" content="width=device-width">
+		<meta name="robots" content="noindex, nofollow">
+
+		<!-- font awesome from BootstrapCDN -->
+		<link href="./Proglab_files/font-awesome.css" rel="stylesheet">
+
+		<!-- compiled CSS -->
+		
+		<link rel="stylesheet" type="text/css" href="./Proglab_files/Proglab-2.0.1.css">
+		<link rel="stylesheet" type="text/css" href="./Proglab_files/common.css">
+		<style>
+		@-webkit-keyframes progress-bar-stripes{from{background-position:40px 0;} to{background-position:0 0;}}@-moz-keyframes progress-bar-stripes{from{background-position:40px 0;} to{background-position:0 0;}}@-o-keyframes progress-bar-stripes{from{background-position:0 0;} to{background-position:40px 0;}}@keyframes progress-bar-stripes{from{background-position:40px 0;} to{background-position:0 0;}}.progress{height:20px;margin-bottom:20px;overflow:hidden;background-color:#f5f5f5;border-radius:4px;-webkit-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.1);box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.1);}
+		.progress-bar{float:left;width:0;height:100%;font-size:12px;line-height:20px;color:#ffffff;text-align:center;background-color:#428bca;-webkit-box-shadow:inset 0 -1px 0 rgba(0, 0, 0, 0.15);box-shadow:inset 0 -1px 0 rgba(0, 0, 0, 0.15);-webkit-transition:width 0.6s ease;transition:width 0.6s ease;}
+		.progress-striped .progress-bar{background-image:-webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));background-image:-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image:-moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-image:linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);background-size:40px 40px;}
+		.progress.active .progress-bar{-webkit-animation:progress-bar-stripes 2s linear infinite;animation:progress-bar-stripes 2s linear infinite;}
+		#loading {width: 40%;position: absolute;top: 50%;left: 30%;margin-top: -15px;font-weight: bold;}
+		</style>
+		<script type="text/javascript" async="" src="./Proglab_files/ckIXEcHhmq3vk2hR7GfhpA.js.téléchargement"></script><script src="./Proglab_files/woopra.js.téléchargement" type="text/javascript" async=""></script><script src="./Proglab_files/webfont.js.téléchargement" type="text/javascript" async=""></script><script type="text/javascript">
+		WebFontConfig = { google: { families: [ 'Open+Sans:400,700:latin,greek','Source+Code+Pro:400,700' ] } };
+		(function() {
+		var wf = document.createElement('script');
+		wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		wf.type = 'text/javascript';
+		wf.async = 'true';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(wf, s);
+		})();
+		</script>
+
+		<!-- compiled JavaScript -->
+		<link rel="stylesheet" href="./Proglab_files/css" media="all"><script type="text/javascript" src="./Proglab_files/Proglab-2.0.1.js.téléchargement"></script>
+
+		<!-- http://tatiyants.com/how-to-get-ie8-to-support-html5-tags-and-web-fonts/ -->
+		<!--[if lt IE 9]>
+		<script>
+			document.createElement('header');
+			document.createElement('tabset');
+			document.createElement('tab');
+			document.createElement('tab-heading');
+			document.createElement('accordion');
+			document.createElement('accordion-group');
+			document.createElement('carousel');
+			document.createElement('slide');
+			document.createElement('kbd');
+			document.createElement('sandbox');
+		</script>
+		<![endif]-->
+	<script async="" src="./Proglab_files/sandbox.api.min.js.téléchargement"></script></head>
+	<body ng-class="{noheader: ui.noheader, thintop: ui.thintop, notop: ui.notop, norpane: ui.norightpane, widetabs: ui.widetabs, toptabsonly: ui.toptabsonly, nobuttons: ui.nobuttons }" filedrop="fileDropped">
+		<!--[if lt IE 9]>
+			<p>Votre navigateur n'est plus tout jeune ! Vous devriez penser à <a href="http://browsehappy.com/" target="_self">le mettre à jour</a> pour une navigation plus agréable.</p>
+		<![endif]-->
+		<header>
+			<h1><a href="http://proglab.fr/" target="_self">Proglab</a></h1>
+			<ul class="btn-group btn-group-hdr ng-scope" ng-controller="HeaderToolbarCtrl">
+				<li class="btn btn-default" ng-click="fileOpenDialog()" ng-show="loadAvailable">
+					<i class="fa fa-fw fa-folder-open"></i> Ouvrir</li>
+				<li class="btn btn-default" ng-click="fileSave()" ng-class="{disabled: fileSaveDisabled}">
+					<i class="fa fa-fw fa-cloud-upload"></i> Enregistrer</li>
+				<li class="btn btn-default" dropdown="" dropdown-toggle="" on-toggle="dropdownToggle(open)" aria-haspopup="true" aria-expanded="false">
+					<i class="fa fa-fw fa-share-square-o"></i> Partager
+					<div class="dropdown-menu" role="menu" ng-click="$event.stopPropagation()">
+                        <!-- ngIf: !shareEnabled --><div ng-if="!shareEnabled" class="alert-error ng-scope">Rien à partager, l'algorithme n'est pas enregistré.</div><!-- end ngIf: !shareEnabled -->
+						Lien à partager :<br>
+						<input type="text" value="" size="45" select-on="dropdownOpen">
+					</div>
+				</li>
+				<li class="btn btn-default" ng-click="copy()"><i class="fa fa-fw fa-copy"></i> Copier</li>
+				<li class="btn btn-default" ng-click="download()"><i class="fa fa-fw fa-download"></i> Télécharger</li>
+			</ul>
+			<ul class="right-menu">
+				<li><a href="http://proglab.fr/demo/" target="_self">démos</a></li>
+				<li><a href="http://proglab.fr/doc/" target="_self">docs</a></li>
+			</ul>
+		</header>
+
+		<div id="loading" class="progress progress-striped active ng-hide" ng-hide="true">
+			<div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+				Chargement...
+			</div>
+		</div>
+
+		<div class="main">
+			<div id="zone1" ng-controller="SnippetsCtrl" ng-show="$parent.ui.onglets" class="ng-scope">
+				<div class="tabcontainer ng-isolate-scope">
+  <ul class="nav nav-tabs" ng-class="{&#39;nav-stacked&#39;: vertical, &#39;nav-justified&#39;: justified}" ng-transclude="">
+					<!-- ngRepeat: tab in tabs --><li ng-class="{active: active, disabled: disabled}" ng-repeat="tab in tabs" heading="Variables" active="tab.active" select="selectTab($index)" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Variables</a>
+</li><!-- end ngRepeat: tab in tabs --><li ng-class="{active: active, disabled: disabled}" ng-repeat="tab in tabs" heading="Entrées et sorties" active="tab.active" select="selectTab($index)" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Entrées et sorties</a>
+</li><!-- end ngRepeat: tab in tabs --><li ng-class="{active: active, disabled: disabled}" ng-repeat="tab in tabs" heading="Boucles et tests" active="tab.active" select="selectTab($index)" class="ng-isolate-scope active">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Boucles et tests</a>
+</li><!-- end ngRepeat: tab in tabs --><li ng-class="{active: active, disabled: disabled}" ng-repeat="tab in tabs" heading="Autres" active="tab.active" select="selectTab($index)" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding">Autres</a>
+</li><!-- end ngRepeat: tab in tabs -->
+				</ul>
+  <div class="tab-content">
+    <!-- ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    
+						<ul class="cm-s-default clearfix ng-scope">
+							<!-- ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="Déclarer un nouveau nombre" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-variable">variable</span> <span class="cm-def">EST_DU_TYPE</span> <span class="cm-atom">NOMBRE</span></li><!-- end ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="Ajouter une affectation de variable" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-variable">variable</span> <span class="cm-def">PREND_LA_VALEUR</span> valeur</li><!-- end ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="Déclarer une nouvelle chaîne de caractères" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-variable">variable</span> <span class="cm-def">EST_DU_TYPE</span> <span class="cm-atom">CHAINE</span></li><!-- end ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope empty">empty</li><!-- end ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="Déclarer une nouvelle liste de nombres" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-variable">variable</span> <span class="cm-def">EST_DU_TYPE</span> <span class="cm-atom">LISTE</span></li><!-- end ngRepeat: snippet in tab.list -->
+						</ul>
+					</div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    
+						<ul class="cm-s-default clearfix ng-scope">
+							<!-- ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="Ajouter une instruction pour demander la valeur d&#39;une variable" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-keyword">LIRE</span> <span class="cm-variable">variable</span></li><!-- end ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope empty">empty</li><!-- end ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="Ajouter une instruction pour afficher du texte" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-keyword">AFFICHER</span> <span class="cm-string">"message"</span></li><!-- end ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="Ajouter une instruction pour afficher du texte puis un retour à la ligne" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-keyword">AFFICHER*</span> <span class="cm-string">"message"</span></li><!-- end ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="Ajouter une instruction pour afficher la valeur d&#39;une variable" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-keyword">AFFICHER</span> <span class="cm-variable">variable</span></li><!-- end ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="Ajouter une instruction pour afficher la valeur d&#39;une variable puis un retour à la ligne" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-keyword">AFFICHER*</span> <span class="cm-variable">variable</span></li><!-- end ngRepeat: snippet in tab.list -->
+						</ul>
+					</div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope active" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    
+						<ul class="cm-s-default clearfix ng-scope">
+							<!-- ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="Ajouter un test SI ... ALORS" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-cond">SI</span> (condition) <span class="cm-cond">ALORS</span> ...</li><!-- end ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="Ajouter une boucle Pour" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-loop">POUR</span> variable <span class="cm-loop">ALLANT_DE</span> début <span class="cm-loop">A</span> fin</li><!-- end ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="Ajouter un test SI ... ALORS ... SINON" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-cond">SI</span> (condition) <span class="cm-cond">ALORS</span> ... <span class="cm-cond">SINON</span> ...</li><!-- end ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="Ajouter une boucle Tant que" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-loop">TANT_QUE</span> (condition) <span class="cm-loop">FAIRE</span> ...</li><!-- end ngRepeat: snippet in tab.list -->
+						</ul>
+					</div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    
+						<ul class="cm-s-default clearfix ng-scope">
+							<!-- ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-keyword">TRACER_POINT</span></li><!-- end ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="Ajouter une pause" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-keyword">PAUSE</span></li><!-- end ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-keyword">TRACER_SEGMENT</span></li><!-- end ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="Ajouter un commentaire" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-comment">// Commentaire</span></li><!-- end ngRepeat: snippet in tab.list --><li ng-repeat="snippet in tab.list" ng-bind-html="snippet.display" title="" ng-click="click($index)" ng-class="{empty: snippet.empty}" class="ng-binding ng-scope"><span class="cm-keyword">EFFACER_GRAPHIQUE</span></li><!-- end ngRepeat: snippet in tab.list -->
+						</ul>
+					</div><!-- end ngRepeat: tab in tabs -->
+  </div>
+</div>
+			</div>
+			<div id="zone2" ng-controller="LangSelectCtrl" class="ng-scope">
+				<div class="btn-group" ng-show="$parent.ui.langages">
+					<button type="button" class="btn btn-default ng-pristine ng-untouched ng-valid active" ng-model="language" ng-change="change()" btn-radio="&#39;AlgoBox&#39;">AlgoBox</button>
+					<button type="button" class="btn btn-default ng-pristine ng-untouched ng-valid" ng-model="language" ng-change="change()" btn-radio="&#39;JavaScript&#39;">JavaScript</button>
+				</div>
+			</div>
+			<div id="zone3">
+				<div class="btn-group-vertical ng-scope" ng-controller="EditorToolbarCtrl" ng-hide="$parent.buttons.aucun">
+					<button type="button" class="btn btn-default ng-scope" ng-click="newDoc()" ng-show="$parent.buttons.nouveau" tooltip="Nouvel algorithme" tooltip-append-to-body="true" tooltip-placement="right"><i class="fa fa-fw fa-file-o"></i></button>
+					<button type="button" class="btn btn-default ng-scope" ng-click="undo()" ng-class="{disabled: !undoActive}" ng-show="$parent.buttons.undo" tooltip="Défaire (Ctrl-z)" tooltip-append-to-body="true" tooltip-placement="right"><i class="fa fa-fw fa-undo"></i></button>
+					<button type="button" class="btn btn-default ng-scope disabled" ng-click="redo()" ng-class="{disabled: !redoActive}" ng-show="$parent.buttons.undo" tooltip="Refaire (Ctrl-y)" tooltip-append-to-body="true" tooltip-placement="right"><i class="fa fa-fw fa-repeat"></i></button>
+					<button type="button" class="btn btn-default ng-scope" ng-click="indent()" ng-show="$parent.buttons.indent" tooltip="Augmenter le retrait (↹)" tooltip-append-to-body="true" tooltip-placement="right"><i class="fa fa-fw fa-indent"></i></button>
+					<button type="button" class="btn btn-default ng-scope" ng-click="unindent()" ng-show="$parent.buttons.indent" tooltip="Diminuer le retrait (majuscule ↹)" tooltip-append-to-body="true" tooltip-placement="right"><i class="fa fa-fw fa-outdent"></i></button>
+					<button type="button" class="btn btn-default ng-scope" ng-click="beautify()" tooltip="Refaire la mise en page" tooltip-append-to-body="true" tooltip-placement="right"><i class="fa fa-fw fa-magic"></i></button>
+					<button type="button" class="btn btn-default ng-scope" ng-click="run()" ng-class="{disabled: running}" ng-show="$parent.buttons.run" tooltip="Lancer le programme" tooltip-append-to-body="true" tooltip-placement="right"><i class="fa fa-fw fa-play"></i></button>
+					<button type="button" class="btn btn-default ng-scope" ng-click="debug()" ng-class="{disabled: running}" ng-show="$parent.buttons.run" tooltip="Lancer en mode pas-à-pas" tooltip-append-to-body="true" tooltip-placement="right"><i class="fa fa-fw fa-step-forward"></i></button>
+					<button type="button" class="btn btn-default ng-scope disabled" ng-click="stop()" ng-class="{disabled: !running}" ng-show="$parent.buttons.run" tooltip="Arrêter le programme" tooltip-append-to-body="true" tooltip-placement="right"><i class="fa fa-fw fa-stop"></i></button>
+				</div>
+				<div class="btn-group-vertical ng-scope" ng-controller="AlgoboxToolbarCtrl" ng-show="shouldBeShown()">
+					<button type="button" class="btn btn-default ng-scope" ng-click="repereDialog()" ng-show="$parent.buttons.repere" tooltip="Repère graphique" tooltip-append-to-body="true" tooltip-placement="right"><i class="fa fa-fw icon-grid"></i></button>
+					<button type="button" class="btn btn-default ng-scope" ng-click="f1Dialog()" ng-show="$parent.buttons.f1" tooltip="Modifier la fonction F1" tooltip-append-to-body="true" tooltip-placement="right"><i class="fa fa-fw">F1</i></button>
+					<button type="button" class="btn btn-default ng-scope" ng-click="f2Dialog()" ng-show="$parent.buttons.f2" tooltip="Modifier la fonction F2" tooltip-append-to-body="true" tooltip-placement="right"><i class="fa fa-fw">F2</i></button>
+				</div>
+			</div>
+			<div id="zone4" ng-controller="EditorCtrl" class="ng-scope">
+				<div ui-codemirror="editorOptions" ng-model="$root.model.source" autofocus="on" class="ng-untouched ng-valid ng-dirty"><div class="CodeMirror cm-s-default          CodeMirror-focused"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 297.219px; left: 160.984px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-hscrollbar" style="left: 45px;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-vscrollbar"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 45px; min-width: 691.984px; min-height: 328px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><div style="width: 50px; height: 50px; overflow-x: scroll;"></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""><div class="CodeMirror-cursor" style="left: 115.984px; top: 293.219px; height: 13.3281px;">&nbsp;</div></div><div class="CodeMirror-code" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">1</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-header">VARIABLES</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">2</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span></span><span class="cm-variable">NB</span> <span class="cm-def">EST_DU_TYPE</span> <span class="cm-atom">NOMBRE</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">3</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span></span><span class="cm-variable">F</span> <span class="cm-def">EST_DU_TYPE</span> <span class="cm-atom">NOMBRE</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">4</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-header">DEBUT_ALGORITHME</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">5</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span></span><span class="cm-keyword">AFFICHER</span> <span class="cm-string">"Combien avez-vous fait de photocopie ? "</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">6</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span></span><span class="cm-keyword">LIRE</span> <span class="cm-variable">NB</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">7</div></div><pre><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span></span><span class="cm-cond">SI</span> (<span class="cm-variable">NB</span> <span class="cm-operator">&lt;=</span> <span class="cm-number">10</span>) <span class="cm-cond">ALORS</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">8</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span><span class="cm-tab">    </span></span><span class="cm-cond">DEBUT_SI</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">9</div></div><pre><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span><span class="cm-tab">    </span></span><span class="cm-variable">F</span> <span class="cm-def">PREND_LA_VALEUR</span> <span class="cm-variable">NB</span> <span class="cm-operator">*</span> (<span class="cm-number">10</span><span class="cm-operator">/</span><span class="cm-number">100</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">10</div></div><pre><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span><span class="cm-tab">    </span></span><span class="cm-cond">FIN_SI</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">11</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span><span class="cm-tab">    </span></span><span class="cm-cond">SINON</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">12</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span></span><span class="cm-cond">DEBUT_SINON</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">13</div></div><pre><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span></span><span class="cm-cond">SI</span> (<span class="cm-variable">NB</span> <span class="cm-operator">&lt;=</span> <span class="cm-number">30</span>) <span class="cm-cond">ALORS</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">14</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span></span><span class="cm-cond">DEBUT_SI</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">15</div></div><pre><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span></span><span class="cm-variable">F</span> <span class="cm-def">PREND_LA_VALEUR</span> <span class="cm-variable">NB</span> <span class="cm-operator">*</span> (<span class="cm-number">10</span><span class="cm-operator">/</span><span class="cm-number">100</span>) <span class="cm-operator">+</span> (<span class="cm-variable">NB</span> <span class="cm-operator">-</span> <span class="cm-number">10</span>) <span class="cm-operator">*</span> <span class="cm-number">9</span><span class="cm-operator">/</span><span class="cm-number">100</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">16</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span></span><span class="cm-cond">FIN_SI</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">17</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span></span><span class="cm-cond">SINON</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">18</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span></span><span class="cm-cond">DEBUT_SINON</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">19</div></div><pre><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span></span><span class="cm-variable">F</span> <span class="cm-def">PREND_LA_VALEUR</span> <span class="cm-number">10</span> <span class="cm-operator">*</span> (<span class="cm-number">10</span><span class="cm-operator">/</span><span class="cm-number">100</span>) <span class="cm-operator">+</span> <span class="cm-number">20</span> <span class="cm-operator">*</span> (<span class="cm-number">9</span><span class="cm-operator">/</span><span class="cm-number">100</span>) <span class="cm-operator">+</span> (<span class="cm-variable">NB</span> <span class="cm-operator">-</span> <span class="cm-number">30</span>) <span class="cm-operator">*</span> <span class="cm-number">8</span><span class="cm-operator">/</span><span class="cm-number">100</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">20</div></div><pre><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span></span><span class="cm-cond">FIN_SINON</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">21</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span><span class="cm-tab">    </span><span class="cm-tab">    </span></span><span class="cm-cond">FIN_SINON</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">22</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span></span><span class="cm-keyword">AFFICHER</span> <span class="cm-string">"Votre Facture est de : "</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">23</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-error"><span class="cm-tab">    </span></span><span class="cm-keyword">AFFICHER</span> <span class="cm-variable">F</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="position: absolute; left: -45px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 16px; width: 20px;">24</div></div><pre class=""><span style="padding-right: 0.1px;"><span class="cm-header">FIN_ALGORITHME</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; top: 328px;"></div><div class="CodeMirror-gutters" style="height: 736px;"><div class="CodeMirror-gutter CodeMirror-lint-markers"></div><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 28px;"></div></div></div></div></div>
+				<div class="area-overlay">Source</div>
+			</div>
+			<div id="zone5" ng-controller="HelpOutputCtrl" ng-class="{nohelptabs: !ui.helptabs}" class="ng-scope">
+				<div class="tabcontainer ng-isolate-scope">
+  <ul class="nav nav-tabs" ng-class="{&#39;nav-stacked&#39;: vertical, &#39;nav-justified&#39;: justified}" ng-transclude="">
+					<li ng-class="{active: active, disabled: disabled}" active="active.output" class="ng-isolate-scope active">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding"><tab-heading tooltip="Afficher la sortie du programme" class="ng-scope"><i class="fa fa-fw fa-desktop"></i></tab-heading></a>
+</li>
+					<li ng-class="{active: active, disabled: disabled}" active="active.help" class="ng-isolate-scope">
+  <a ng-click="select()" tab-heading-transclude="" class="ng-binding"><tab-heading tooltip="Afficher l&#39;aide" class="ng-scope"><i class="fa fa-fw fa-question-circle"></i></tab-heading></a>
+</li>
+				</ul>
+  <div class="tab-content">
+    <!-- ngRepeat: tab in tabs --><div class="tab-pane ng-scope active" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    
+						
+						<iframe class="sandbox ng-scope" id="sandbox" src="./Proglab_files/saved_resource.html"></iframe>
+						<div class="area-overlay ng-scope">Sortie</div>
+					</div><!-- end ngRepeat: tab in tabs --><div class="tab-pane ng-scope" ng-repeat="tab in tabs" ng-class="{active: tab.active}" tab-content-transclude="tab">
+    
+						
+						<div ng-controller="HelpCtrl" class="ng-scope">
+							<div class="area-overlay">Aide</div>
+							<div class="navigation">
+								<accordion close-others="true"><div class="panel-group" ng-transclude="">
+									<div class="panel panel-default ng-isolate-scope closed" heading="Proglab" is-open="open[0]" ng-class="{open: open[0], closed: !open[0]}">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">Proglab</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+										<ul class="ng-scope">
+											<!-- ngRepeat: link in links[0] --><li ng-repeat="link in links[0]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Ouvrir fichier</li><!-- end ngRepeat: link in links[0] --><li ng-repeat="link in links[0]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Enregistrer</li><!-- end ngRepeat: link in links[0] --><li ng-repeat="link in links[0]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">En seconde</li><!-- end ngRepeat: link in links[0] --><li ng-repeat="link in links[0]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">En 1ère et tle</li><!-- end ngRepeat: link in links[0] --><li ng-repeat="link in links[0]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope displayed">Nouveautés</li><!-- end ngRepeat: link in links[0] -->
+										</ul>
+									</div>
+  </div>
+</div>
+									<div class="panel panel-default ng-isolate-scope open" heading="AlgoBox" is-open="open[1]" ng-class="{open: open[1], closed: !open[1]}">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">AlgoBox</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse in" collapse="!isOpen" style="height: auto;">
+	  <div class="panel-body" ng-transclude="">
+										<ul class="ng-scope">
+											<!-- ngRepeat: link in links[1] --><li ng-repeat="link in links[1]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Variables</li><!-- end ngRepeat: link in links[1] --><li ng-repeat="link in links[1]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Calculs</li><!-- end ngRepeat: link in links[1] --><li ng-repeat="link in links[1]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Chaînes</li><!-- end ngRepeat: link in links[1] --><li ng-repeat="link in links[1]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Listes</li><!-- end ngRepeat: link in links[1] --><li ng-repeat="link in links[1]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope displayed">Tests</li><!-- end ngRepeat: link in links[1] --><li ng-repeat="link in links[1]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Boucles</li><!-- end ngRepeat: link in links[1] --><li ng-repeat="link in links[1]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Affichages</li><!-- end ngRepeat: link in links[1] --><li ng-repeat="link in links[1]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Graphiques</li><!-- end ngRepeat: link in links[1] --><li ng-repeat="link in links[1]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">F1</li><!-- end ngRepeat: link in links[1] --><li ng-repeat="link in links[1]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">F2</li><!-- end ngRepeat: link in links[1] -->
+										</ul>
+									</div>
+  </div>
+</div>
+									<div class="panel panel-default ng-isolate-scope closed" heading="JavaScript" is-open="open[2]" ng-class="{open: open[2], closed: !open[2]}">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{&#39;text-muted&#39;: isDisabled}" class="ng-binding">JavaScript</span></a>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" collapse="!isOpen" style="height: 0px;">
+	  <div class="panel-body" ng-transclude="">
+										<ul class="ng-scope">
+											<!-- ngRepeat: link in links[2] --><li ng-repeat="link in links[2]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Variables</li><!-- end ngRepeat: link in links[2] --><li ng-repeat="link in links[2]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Calculs</li><!-- end ngRepeat: link in links[2] --><li ng-repeat="link in links[2]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Chaînes</li><!-- end ngRepeat: link in links[2] --><li ng-repeat="link in links[2]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Listes</li><!-- end ngRepeat: link in links[2] --><li ng-repeat="link in links[2]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope displayed">Tests</li><!-- end ngRepeat: link in links[2] --><li ng-repeat="link in links[2]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Boucles</li><!-- end ngRepeat: link in links[2] --><li ng-repeat="link in links[2]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Affichages</li><!-- end ngRepeat: link in links[2] --><li ng-repeat="link in links[2]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Graphiques</li><!-- end ngRepeat: link in links[2] --><li ng-repeat="link in links[2]" ng-class="{ displayed: $index == selectedIndex }" ng-click="itemClicked($index)" class="ng-binding ng-scope">Fonctions</li><!-- end ngRepeat: link in links[2] -->
+										</ul>
+									</div>
+  </div>
+</div>
+								</div></accordion>
+							</div>
+							<!-- ngInclude: url --><div class="content ng-scope" ng-include="url"><h2 class="ng-scope">AlgoBox - tests</h2><span class="ng-scope">
+
+Opérateurs de test à utiliser dans les tests SI ... ALORS :
+</span><table class="center ng-scope" cellspacing="0">
+<thead>
+<tr><th>Opérateur</th><th>Description</th><th>Exemple</th></tr>
+</thead>
+<tbody>
+<tr><td>==</td><td>égal</td><td>x==2</td></tr>
+<tr><td>!=</td><td>différent</td><td>x!=0</td></tr>
+<tr><td>&lt;</td><td>strictement inférieur</td><td>x&lt;y</td></tr>
+<tr><td>&lt;=</td><td>inférieur ou égal</td><td>x&lt;=y</td></tr>
+<tr><td>&gt;</td><td>strictement supérieur</td><td>x&gt;y</td></tr>
+<tr><td>&gt;=</td><td>supérieur ou égal</td><td>x&gt;=0</td></tr>
+</tbody>
+</table>
+
+<p class="ng-scope">Il est possible de combiner plusieurs conditions avec ET et OU :<br>
+x&gt;1 ET x&lt;5<br>
+x==3 OU x==5</p>
+
+<p class="ng-scope"><strong>Attention :</strong> SI (x=2) avec un seul signe = ne fonctionne PAS.<br>
+La bonne syntaxe est SI (x==2) avec un double =<br>
+(x=2 avec un = simple veut dire « x prend la valeur 2 »)</p></div>
+						</div>
+					</div><!-- end ngRepeat: tab in tabs -->
+  </div>
+</div>
+			</div>
+			<div id="suggest-run" ng-show="suggestRun" ng-class="{ &#39;fade-out&#39;: suggestRun === &#39;fade-out&#39; }" class="ng-hide"></div>
+		</div>
+
+		<!-- Start of Woopra Code -->
+		<script type="text/javascript">
+		function woopraReady(tracker) {
+			tracker.setDomain('proglab.fr');
+			tracker.setIdleTimeout(300000);
+			tracker.track();
+			return false;
+		}
+		(function() {
+			if(location.host.slice(-3) !== '.fr') return;
+			var wsc = document.createElement('script');
+			wsc.src = document.location.protocol+'//static.woopra.com/js/woopra.js';
+			wsc.type = 'text/javascript';
+			wsc.async = true;
+			var ssc = document.getElementsByTagName('script')[0];
+			ssc.parentNode.insertBefore(wsc, ssc);
+		})();
+		</script>
+		<!-- End of Woopra Code -->
+
+        <script>
+        if (window === top) {
+            // Include the UserVoice JavaScript SDK (only needed once on a page)
+            UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/ckIXEcHhmq3vk2hR7GfhpA.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
+
+            //
+            // UserVoice Javascript SDK developer documentation:
+            // https://www.uservoice.com/o/javascript-sdk
+            //
+
+            // Set colors
+            UserVoice.push(['set', {
+              accent_color: '#448dd6',
+              trigger_color: 'white',
+              trigger_background_color: 'rgba(46, 49, 51, 0.6)'
+            }]);
+
+            // Identify the user and pass traits
+            // To enable, replace sample data with actual user traits and uncomment the line
+            UserVoice.push(['identify', {
+              //email:      'john.doe@example.com', // User’s email address
+              //name:       'John Doe', // User’s real name
+              //created_at: 1364406966, // Unix timestamp for the date the user signed up
+              //id:         123, // Optional: Unique id of the user (if set, this should not change)
+              //type:       'Owner', // Optional: segment your users by type
+              //account: {
+              //  id:           123, // Optional: associate multiple users with a single account
+              //  name:         'Acme, Co.', // Account name
+              //  created_at:   1364406966, // Unix timestamp for the date the account was created
+              //  monthly_rate: 9.99, // Decimal; monthly rate of the account
+              //  ltv:          1495.00, // Decimal; lifetime value of the account
+              //  plan:         'Enhanced' // Plan name for the account
+              //}
+            }]);
+
+            // Add default trigger to the bottom-right corner of the window:
+            UserVoice.push(['addTrigger', { mode: 'contact', trigger_position: 'bottom-right' }]);
+
+            // Or, use your own custom trigger:
+            //UserVoice.push(['addTrigger', '#id', { mode: 'contact' }]);
+
+            // Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
+            UserVoice.push(['autoprompt', {}]);
+        }
+        </script>
+	
+
+</body></html>
